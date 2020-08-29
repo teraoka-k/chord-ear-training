@@ -5,28 +5,35 @@
       "label": "build",
       "type": "shell",
       "group": "none",
-      "command": "docker build -t chord .",
+      "command": "docker build -t chord:v1 .",
       "problemMatcher": []
     },
     {
       "label": "run",
       "type": "shell",
       "group": "none",
-      "command": "docker run --rm -it --name chord -p 3000:3000 -v ${PWD}:/app chord ash -c \"npm i && npm run dev\"",
+      "command": "docker run --rm -it --name chord -p 3000:3000 -v ${PWD}:/app chord npm run dev",
+      "problemMatcher": []
+    },
+    {
+      "label": "run docker image",
+      "type": "shell",
+      "group": "none",
+      "command": "docker run --rm -it --name chord -e PORT=3000 -p 3000:3000 chord",
+      "problemMatcher": []
+    },
+    {
+      "label": "init node_modules",
+      "type": "shell",
+      "group": "none",
+      "command": "docker run --rm -it --name chord -p 3000:3000 -v ${PWD}:/app chord npm i",
       "problemMatcher": []
     },
     {
       "label": "login",
       "type": "shell",
       "group": "none",
-      "command": "docker exec --rm -it chord ash",
-      "problemMatcher": []
-    },
-    {
-      "label": "start&login",
-      "type": "shell",
-      "group": "none",
-      "command": "docker run --rm -it -v ${PWD}:/app chord ash",
+      "command": "docker exec -it chord ash",
       "problemMatcher": []
     }
   ]
