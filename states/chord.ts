@@ -17,14 +17,14 @@ function getRandomChord(): string[] {
     case 0:
       return ["C3", "E3", "G3"];
     case 1:
-      return ["C3", "G3", "E4"];
+      return ["C4", "E4", "G4"];
     case 2:
-      return ["E3", "C4", "G4"];
-    case 3:
       return ["E3", "G3", "C4"];
+    case 3:
+      return ["E4", "G4", "C5"];
     case 4:
       return ["G3", "C4", "E4"];
     case 5:
-      return ["G3", "E4", "C5"];
+      return ["G2", "C3", "E3"];
   }
 }
