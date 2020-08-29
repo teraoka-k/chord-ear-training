@@ -1,5 +1,1 @@
-.vscode
-.dockerignore
-.gitignore
-Dockerfile
-readme.md
+.git
