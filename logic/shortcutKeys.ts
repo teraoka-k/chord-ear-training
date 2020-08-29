@@ -40,7 +40,7 @@ const shortcutKeys: ShortcutKey[] = [
     },
   },
   {
-    key: "v",
+    key: "s",
     action: showAnswer,
   },
 ];
