@@ -6,7 +6,6 @@ COPY . .
 
 RUN npm i
 RUN npm run build
+RUN echo 1
 
-RUN find -not -path "./node_modules/*" -not -path "./.next/*" -delete
-
-RUN npx next start -p $PORT
+CMD npx next start -p $PORT
